@@ -6,21 +6,13 @@
 	</head>
 	<body>
 	
-		<div>
-			<div>Nome do produto</div>
-			<div>Valor: <span>100,00</span></div>
-			<div>Data da entrega: <span>01/05/2022</span></div>
-			
-			<div>Produto</div>
-			<div>url do produto</div>
-			
-			<div>Descrição: </div>
-			<div>
-				<textarea>Descrição do pedido</textarea>
-			</div>
+		<div th:each ="produto : ${produtos}">
+			<div th:text="${produto.nome}">Nome do produto</div>
+			<div>R$ <span th:text="${produto.preco}">100,00</span></div>
+			<div th:text="${produto.descricao}">Descrição: </div>
 			
 			<div>
-				<img src=""/>
+				<img th:src="${produto.urlImagem}" src=""/>
 			</div>
 		</div>
 		
