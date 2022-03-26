@@ -9,5 +9,6 @@ import br.com.adamastor.mvc.loja.model.Produto;
 public interface ProdutoRepository extends CrudRepository<Produto, Long>{
 	
 	List<Produto> findAll();
+	List<Produto> findByCategoriaNome(String nome);
 
 }

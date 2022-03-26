@@ -18,5 +18,9 @@ public class ProdutoService {
 		return produtoRepository.findAll();
 	}
 	
+	public List<Produto> listarPorCategoria(String nome){
+		return produtoRepository.findByCategoriaNome(nome);
+	}
+	
 
 }
