@@ -24,7 +24,7 @@ public class ProdutoController {
 		List<Produto> produtos = produtoService.listarTodos();
 		model.addAttribute("produtos", produtos);
 		
-		return "produtos";
+		return "produto/produtos";
 	}
 	
 	@GetMapping("/categoria/{nome}")
@@ -32,7 +32,7 @@ public class ProdutoController {
 		List<Produto> produtos = produtoService.listarPorCategoria(nome);
 		model.addAttribute("produtos", produtos);
 		
-		return "produtos";
+		return "produto/produtos";
 	}
 	
 }
